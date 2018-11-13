@@ -1,0 +1,15 @@
+﻿@model IEnumerable<MAP_PI.Domain.Entities.Mandate>
+
+@{
+    ViewBag.Title = "MandateInfo";
+}
+
+<div class="container">
+    <h4 style="text-align : center ; border-bottom: 1px solid #808080">MandateInfo</h4>
+    @foreach(var item in Model)
+    {
+
+        <p><label>Ressource Email : </label>@item.end_Date</p>
+       
+    }
+</div>

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src='@Url.Content("~/Content/levio.png")' width="200" height="70"/>
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                   
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Ressources ", "About", "Home")</li>
+                    <li>@Html.ActionLink("Nos Dashbords", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Inbox", "Contact", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mandates</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="@Url.Action("Index", "Mandate")">Display All Mandates</a>
+                            </li>
+                            <li>
+                                <a href="">Display Ressources Map </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Create", "Mandate")">Assign Mandates </a>
+                            </li>
+                          
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">International Recruitments</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="@Url.Action("Create", "Recrutment")">Send a Request </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Recrutment")">Show All Requests</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="row">
+                <div class="col-sm-6">
+                    <span class="footer-brand">
+                        <strong class="alert-success">LEVIO</strong> 
+                    </span>
+                    <p class="no-margin">
+                        &copy; @DateTime.Now.Year <strong>The Exports</strong>. ALL Rights Reserved.
+                    </p>
+                </div><!-- /.col -->
+            </div><!-- /.row-->
+          @*  <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>*@
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

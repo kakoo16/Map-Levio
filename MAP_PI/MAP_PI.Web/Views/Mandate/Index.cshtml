@@ -1,0 +1,155 @@
+﻿@model IEnumerable<MAP_PI.Domain.Entities.Mandate>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br /> <br /><br />
+<p >
+    <h3><center>  @Html.ActionLink("Assign A Ressource To a Project", "Create") </center></h3>
+</p>
+
+<br /><br />
+<br />
+<br />
+
+<div class="container">
+    <div class="form-group">
+    <div class="input-group">
+
+        <span class="input-group-addon"><i class="glyphicon glyphicon-search" ></i></span>
+        <input type="text" id="Search" placeholder="Search" class="form-control"/>
+    </div>
+
+    </div>
+
+
+
+
+
+</div>
+
+
+
+<br />
+<br />
+<table class="table table-striped" >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fees)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.start_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_Date)
+        </th>
+        <th>
+           Project
+        </th>
+        <th>
+          Reccource Assigned to project 
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr class="Search">
+        <td>
+            @Html.DisplayFor(modelItem => item.Fees)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.start_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProFk.project_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResFk.UserName)
+        </td>
+        <td>
+            <a href="#" data-toggle="popover" data-trigger="hover" id="@item.Fees">@item.Fees</a>
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /*idp = item.ProjectId, idr = item.Id*/ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { idp = item.ProjectId, idr = item.Id })
+        </td>
+    </tr>
+}
+     
+</table>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function Contains(text_one, text_two) {
+
+            if (text_one.indexOf(text_two) != -1)
+                return true; 
+        }
+        $("#Search").keyup(function () {
+            var searchText = $("#Search").val().toLowerCase();
+            $(".Search").each(function () {
+                if (!Contains($(this).text().toLowerCase(), searchText)) {
+
+                    $(this).hide(); 
+                }
+                else {
+                    $(this).show(); 
+                }
+            }); 
+
+
+        });
+
+
+    }); 
+
+
+
+</script> 
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+ <script>
+     $(document).ready(function () {
+         $('[data-toggle="popover"]').popover({
+             title: setData , 
+             html : true , 
+             placement : 'right'
+
+         });
+         function setData(id) {
+             var set_data = '';
+             var element = $(this); 
+             var id = element.attr("id");
+             $.ajax({
+                 url:"/Mandate/MandateInfo?id"+ id ,
+                 method: "post",
+                 async: false,
+                 data: { id: id },
+                 success: function (data) {
+                     set_data = data; 
+                 }
+             });
+
+             return set_data;
+
+         }
+
+
+     });
+
+
+
+
+
+
+
+
+</script>
+
+
+
+<br /><br /><br /><br /><br />

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<MAP_PI.Domain.Entities.Request>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.requested_profil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.experience_year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.education_scolarity)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.deposit_hour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.deposit_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.start_date_mandate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.end_date_mandate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.requested_profil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.experience_year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.education_scolarity)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.deposit_hour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.deposit_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.start_date_mandate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.end_date_mandate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RequestId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RequestId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RequestId })
+        </td>
+    </tr>
+}
+
+</table>

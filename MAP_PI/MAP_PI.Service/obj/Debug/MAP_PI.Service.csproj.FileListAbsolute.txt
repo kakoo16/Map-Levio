@@ -1,0 +1,38 @@
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Service.dll.config
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Service.dll
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Service.pdb
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\EntityFramework.dll
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Data.dll
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Domain.dll
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Data.pdb
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Domain.pdb
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\EntityFramework.xml
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\obj\Debug\MAP_PI.Service.csprojResolveAssemblyReference.cache
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\obj\Debug\MAP_PI.Service.dll
+C:\Users\Dahmen-Salem-PC\Desktop\MAP_PI\MAP_PI.Service\obj\Debug\MAP_PI.Service.pdb
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Service.dll.config
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Service.dll
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Service.pdb
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\EntityFramework.dll
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Data.dll
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Domain.dll
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\Service.Pattern.dll
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Data.pdb
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\MAP_PI.Domain.pdb
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\Service.Pattern.pdb
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\EntityFramework.xml
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\obj\Debug\MAP_PI.Service.csprojResolveAssemblyReference.cache
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\obj\Debug\MAP_PI.Service.dll
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Service\obj\Debug\MAP_PI.Service.pdb
