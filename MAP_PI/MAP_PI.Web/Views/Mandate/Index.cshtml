@@ -70,7 +70,7 @@
             @Html.DisplayFor(modelItem => item.ResFk.UserName)
         </td>
         <td>
-            <a href="#" data-toggle="popover" data-trigger="hover" id="@item.Fees">@item.Fees</a>
+            <a href="#" data-toggle="popover" data-trigger="hover" id="@item.ResFk.Id">@item.ResFk.UserName</a>
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /*idp = item.ProjectId, idr = item.Id*/ }) |
@@ -115,7 +115,7 @@
  <script>
      $(document).ready(function () {
          $('[data-toggle="popover"]').popover({
-             title: setData , 
+             title: setData,
              html : true , 
              placement : 'right'
 
@@ -125,15 +125,14 @@
              var element = $(this); 
              var id = element.attr("id");
              $.ajax({
-                 url:"/Mandate/MandateInfo?id"+ id ,
-                 method: "post",
+                 url:"/Mandate/MandateInfo?id="+id ,
+                 method: "get",
                  async: false,
-                 data: { id: id },
                  success: function (data) {
                      set_data = data; 
                  }
              });
-
+             console.log(set_data);
              return set_data;
 
          }

@@ -47,10 +47,9 @@ namespace MAP_PI.Web.Controllers
         // POST: Mandate/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Mandate pc , String maile)
+        public ActionResult Create(Mandate pc)
         {
-           
-            Mandate p = new Mandate();
+         
             float diffdays = (float)((pc.end_Date.Date - pc.start_Date.Date).Days);
             float costfloat = 1F;
             if (diffdays < 60F)
@@ -61,17 +60,19 @@ namespace MAP_PI.Web.Controllers
             {
                 costfloat = diffdays * 7.5F;
             }
+            pc.Fees = costfloat;
 
-            p.start_Date = pc.start_Date;
-            p.end_Date = pc.end_Date;
-            p.Fees = costfloat;
-            p.ProjectId = pc.ProjectId;
-            p.Id = pc.Id;
-          
-           
+            Person p1 = new Person();
+            IEnumerable<Person> list = rs.GetAll();
+            foreach (Person p in list)
+            {
+                if (p.Id.Equals(pc.Id))
+                    p1 = p;
+            }
+
             try
             {
-                MailMessage message = new MailMessage("amine.benkhelifa@esprit.tn","amine.benkhelifa@esprit.tn", "You Are Assigned To an other mandate", "Hello Mr Ressource you are assigned to work for an other Project . Greeting LeviO ");
+                MailMessage message = new MailMessage("amine.benkhelifa@esprit.tn", p1.Email, "You Are Assigned To an other mandate", "Hello Mr Ressource you are assigned to work for an other Project . Greeting LeviO ");
                 message.IsBodyHtml = true;
                 SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
                 client.EnableSsl = true;
@@ -84,7 +85,7 @@ namespace MAP_PI.Web.Controllers
             }
 
 
-            gm.createMandat(p);
+            gm.createMandat(pc);
             gm.Commit();
             
             return RedirectToAction("Index", "Mandate");
@@ -123,86 +124,22 @@ namespace MAP_PI.Web.Controllers
         }
 
         
-        public ActionResult MandateInfo(int id)
+        public Person MandateInfo(string id)
         {
-
-            
-            var RessourceInfo = gm.GetById((long)id); 
-            return View(RessourceInfo); 
-
-
+            IEnumerable<Person> list = rs.GetAll();
+            foreach(Person p in list)
+            {
+                if (p.Id.Equals(id))
+                    return p;
+            }
+            return null;
         }
 
 
 
 
 
-        //[HttpPost]
-        //public ActionResult StartWork(String id, int idp, String maile, Mandate cm)
-        //{
-
-
-        //    Mandate c = new Mandate();
-        //    // c = ms.Get(t => t.CIN == id);
-        //    // c = ms.Get(t => t.projectId == idp);
-        //    c.ResFk.Email = id;
-        //    c.ProjectId = idp;
-
-        //    c.end_Date = cm.end_Date;
-        //    c.start_Date = cm.start_Date; 
-        //    c.Fees = 1F;
-        //    // c.Cost= (((c.MandateStartDate.Year - c.MandateEndDate.Year) * 12) + c.MandateStartDate.Month - c.MandateEndDate.Month) * 25F;
-
-
-        //    try
-        //    {
-        //        MailMessage message = new MailMessage("amine.benkhelifa@esprit.tn", "ressource", "aandek mandat jdid", "haya bara ekhdem");
-        //        message.IsBodyHtml = true;
-        //        SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-        //        client.EnableSsl = true;
-        //        client.Credentials = new System.Net.NetworkCredential("amine.benkhelifa@esprit.tn", "18071964dad");
-        //        client.Send(message);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine(ex.StackTrace);
-        //    }
-
-        //    gm.Add(c);
-        //    gm.Commit();
-
-        //    Mandate f = new Mandate();
-        //    f = gm.Get(t => t.ResFk.Email == id);
-
-
-        //    float diffdays = (float)((f.end_Date.Date - f.start_Date.Date).Days);
-        //    float costfloat = 1F;
-        //    if (diffdays < 60F)
-        //    {
-        //        costfloat = diffdays * 5F;
-        //    }
-        //    else if (diffdays > 60F)
-        //    {
-        //        costfloat = diffdays * 7.5F;
-        //    }
-        //    f.Fees = costfloat;
-        //    gm.Update(f);
-        //    gm.Commit();
-
-
-        //    /*Ressource r = new Ressource();
-        //    r = rs.Get(t => t.CIN == id);
-        //    r.etat = "InMandate";
-        //    rs.Update(r);
-        //    rs.Commit();*/
-
-
-
-        //    return RedirectToAction("Index");
-
-
-        //}
-
+      
 
 
 

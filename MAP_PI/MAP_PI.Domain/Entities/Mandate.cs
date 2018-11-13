@@ -11,6 +11,7 @@ namespace MAP_PI.Domain.Entities
 {
     public class Mandate
     {
+
         [Key, Column(Order = 0)]
         public int ProjectId { get; set; }
 
@@ -30,6 +31,9 @@ namespace MAP_PI.Domain.Entities
         public virtual Person ResFk { get; set; }
         //public virtual ICollection<Ressource> Ressourcess { get; set; }
         //public virtual ICollection<Project> Projets { get; set; }
-
+        public override string ToString()
+        {
+            return "start_Date = "+ start_Date+ " ProjectId "+ ProjectId;
+        }
     }
 }

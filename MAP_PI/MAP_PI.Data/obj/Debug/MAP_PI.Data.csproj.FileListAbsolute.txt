@@ -32,3 +32,5 @@ C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Data\obj\
 C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Data\obj\Debug\MAP_PI.Data.csproj.GenerateResource.Cache
 C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Data\obj\Debug\MAP_PI.Data.dll
 C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Data\obj\Debug\MAP_PI.Data.pdb
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Data\obj\Debug\MAP_PI.Data.Migrations.jj.resources
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Data\obj\Debug\MAP_PI.Data.Migrations.j.resources

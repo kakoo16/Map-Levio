@@ -23,6 +23,6 @@ C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Domain\bi
 C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Domain\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Domain\obj\Debug\MAP_PI.Domain.csprojResolveAssemblyReference.cache
 C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Domain\obj\Debug\MAP_PI.Domain.dll
 C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Domain\obj\Debug\MAP_PI.Domain.pdb
+C:\Users\Guideinfo\Documents\Visual Studio 2015\Projects\MAP_PI\MAP_PI.Domain\obj\Debug\MAP_PI.Domain.csprojResolveAssemblyReference.cache

@@ -27,5 +27,9 @@ namespace MAP_PI.Domain.Entities
         public string Role { get; set; }
 
         public virtual ICollection<Inbox> MyInbox { get; set; }
+        public override string ToString()
+        {
+            return "UserName = " + UserName + "   Email  =" + Email ;
+        }
     }
 }
