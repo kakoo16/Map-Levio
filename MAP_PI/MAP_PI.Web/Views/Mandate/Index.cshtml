@@ -73,9 +73,7 @@
             <a href="#" data-toggle="popover" data-trigger="hover" id="@item.ResFk.Id">@item.ResFk.UserName</a>
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /*idp = item.ProjectId, idr = item.Id*/ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { idp = item.ProjectId, idr = item.Id })
+          @Html.ActionLink("Delete", "Delete", new { idp = item.ProjectId, idr = item.Id })
         </td>
     </tr>
 }

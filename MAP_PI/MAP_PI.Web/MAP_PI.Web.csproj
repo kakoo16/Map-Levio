@@ -214,15 +214,20 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountAPIController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HolidayApiController.cs" />
+    <Compile Include="Controllers\HolidayAPIiController.cs" />
+    <Compile Include="Controllers\HolidayController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MandateAPIController.cs" />
     <Compile Include="Controllers\MandateController.cs" />
     <Compile Include="Controllers\RecrutmentController.cs" />
     <Compile Include="Controllers\ResourceController.cs" />
+    <Compile Include="Controllers\RestfulController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MandatApiController1.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -299,9 +304,13 @@
     <Content Include="Views\Recrutment\Index.cshtml" />
     <Content Include="Views\Mandate\MandateInfo.cshtml" />
     <Content Include="Views\Mandate\MapDisplay.cshtml" />
+    <Content Include="Views\Holiday\CreateHoliday.cshtml" />
+    <Content Include="Views\Holiday\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\HolidayApi\" />
+    <Folder Include="Views\Restful\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

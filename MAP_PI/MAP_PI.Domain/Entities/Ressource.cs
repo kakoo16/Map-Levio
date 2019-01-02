@@ -23,6 +23,8 @@ namespace MAP_PI.Domain.Entities
         public float Salary { get; set; }
         public Boolean etat { get; set;  }
         public string  EtatResource  { get; set; }
+        public string lang { get; set; }
+        public string lat { get; set; }
         public string JobType { get; set; }
         public ContractType contract_Type { get; set; }
         public AvailibilityType availibity_type { get; set; }

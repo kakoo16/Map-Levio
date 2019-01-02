@@ -25,9 +25,9 @@ namespace MAP_PI.Web.Controllers
             var headers = re.Headers;
             string token = "";
 
-            if (headers.Contains("Member"))
+            if (headers.Contains("client"))
             {
-                token = headers.GetValues("Member").First();
+                token = headers.GetValues("client").First();
             }
 
            Person u = us.getUserByRoleMember();

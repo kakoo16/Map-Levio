@@ -66,17 +66,9 @@
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
     <Compile Include="MAP_PIContext.cs" />
-    <Compile Include="Migrations\201811122025301_m.cs" />
-    <Compile Include="Migrations\201811122025301_m.Designer.cs">
-      <DependentUpon>201811122025301_m.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201811131924089_jj.cs" />
-    <Compile Include="Migrations\201811131924089_jj.Designer.cs">
-      <DependentUpon>201811131924089_jj.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201811131925069_j.cs" />
-    <Compile Include="Migrations\201811131925069_j.Designer.cs">
-      <DependentUpon>201811131925069_j.cs</DependentUpon>
+    <Compile Include="Migrations\201812251214033_m.cs" />
+    <Compile Include="Migrations\201812251214033_m.Designer.cs">
+      <DependentUpon>201812251214033_m.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,14 +84,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811122025301_m.resx">
-      <DependentUpon>201811122025301_m.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811131924089_jj.resx">
-      <DependentUpon>201811131924089_jj.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201811131925069_j.resx">
-      <DependentUpon>201811131925069_j.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812251214033_m.resx">
+      <DependentUpon>201812251214033_m.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

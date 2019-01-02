@@ -50,10 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="GestionHoliday.cs" />
     <Compile Include="GestionMandats.cs" />
     <Compile Include="GestionRecrutment.cs" />
     <Compile Include="GestionRessource.cs" />
     <Compile Include="GestionUser.cs" />
+    <Compile Include="IGestionHoliday.cs" />
     <Compile Include="IGestionMandats.cs" />
     <Compile Include="IGestionRecrutment.cs" />
     <Compile Include="IGestionRessource.cs" />

@@ -27,12 +27,12 @@ namespace MAP_PI.Service
 
         public Person getUserByRoleMember()
         {
-            return myUnit.getRepository<Person>().Get(c => c.Role.Equals("Client"));
+            return myUnit.getRepository<Person>().Get(c => c.Role.Equals("client"));
         }
 
         public Person getUserByRoleRessource()
         {
-            return myUnit.getRepository<Person>().Get(c => c.Role.Equals("Ressource"));
+            return myUnit.getRepository<Person>().Get(c => c.Role.Equals("ressource"));
         }
 
         public Person getUserByRoleVolunteer()
@@ -45,5 +45,8 @@ namespace MAP_PI.Service
             myUnit.getRepository<Person>().Update(u);
             myUnit.Commit();
         }
+
+
+
     }
 }

@@ -46,7 +46,6 @@ namespace MAP_PI.Web.Controllers
 
         // POST: Mandate/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create(Mandate pc)
         {
          
@@ -136,7 +135,14 @@ namespace MAP_PI.Web.Controllers
         }
 
 
+        public ActionResult maps()
+        {
+            ViewBag.resources = rs.ToString();
+            return View(); 
 
+
+
+        }
 
 
       
