@@ -1,0 +1,70 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/template/template.xhtml">
+
+<ui:define name="title">You can add a new Reclamation</ui:define>
+<ui:define name="content">
+<h:form>
+<h:panelGrid columns="2">
+<h:outputText value="titre" />
+<h:inputText value="#{reclamationBean.message_content}" />
+<h:outputText value="Contenu" />
+<h:inputText value="#{reclamationBean.message_object}" />
+
+<h:commandButton action="#{reclamationBean.addReclamation()}" value="Ajouter une Reclamation" />
+</h:panelGrid>
+</h:form>
+<h:form>
+<h:dataTable value="#{reclamationBean.getListReclamation()}" var="reclamation" border="1">
+<h:column>
+<f:facet name="header">
+<h:outputText value="message_content" />
+</f:facet>
+<h:outputText value="#{reclamation.message_content}" />
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="message_object" />
+</f:facet>
+<h:outputText value="#{reclamation.message_object}" />
+</h:column>
+
+
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="Action" />
+</f:facet>
+<h:commandButton action="#{reclamationBean.supprimer(reclamation.reclamationId)}" value="supprimer" />
+<h:commandButton action="#{reclamationBean.modifier(reclamation)}" value="Modifier" />
+</h:column>
+</h:dataTable>
+
+<h:panelGrid columns="2">
+
+
+<h:outputText value="message_content" />
+<h:inputText value="#{reclamation.message_content}"></h:inputText>
+
+
+<h:outputText value="message_object" />
+<h:inputText value="#{reclamation.message_object}"></h:inputText>
+
+<h:commandButton action="#{reclamationBean.addReclamation()}" value="Ajouter Reclamation" />
+<h:commandButton action="#{reclamationBean.mettreAjourReclamation()}" value="Mettre à jour Reclamation" />
+<br/>
+</h:panelGrid>
+
+</h:form>
+
+</ui:define>
+</ui:composition>
+
+
+
+
+
+

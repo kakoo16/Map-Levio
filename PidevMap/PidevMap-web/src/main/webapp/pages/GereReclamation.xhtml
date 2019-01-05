@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<h:body>
+    <h2>Reclamation DataBase:</h2>
+    <h:form>
+        <p:panel id="panel" header="Ajouter ou Modifier Reclacmation">
+            <p:messages id="msgs" />
+            <h:panelGrid columns="3" cellpadding="5">
+                <p:outputLabel for="Titre" value="Titre" />
+                <p:inputText id="Titre" value="#{reclamationBean.message_object}" required="true" label="Titre">
+                    <f:validateLength minimum="2" />
+                </p:inputText>
+                <p:message for="Titre" display="icon" />
+                <p:outputLabel for="Contenu" value="Contenu:" />
+                <p:inputText id="Contenu" value="#{reclamationBean.message_content}" label="Contenu" required="true">
+                    <f:validateLength minimum="2" />
+                    <p:ajax update="msgContenu" event="keyup" />
+                </p:inputText>
+                <p:message for="Contenu" id="msgContenu" display="icon" />
+            </h:panelGrid>
+            <p:commandButton value="Ajouter" update="panel,data" action="#{reclamationBean.addReclamation()}" icon="pi pi-check" />
+            <p:commandButton value="Mettre à jour Rec" update="panel,data" action="#{reclamationBean.mettreAjourReclamation()}"
+                icon="pi pi-check" />
+        </p:panel>
+
+        <p:dataTable id="data" var="reclamation" value="#{reclamationBean.getListReclamation()}">
+
+				<p:column  filterBy="#{reclamation.message_object}"
+					headerText="Object" filterMatchMode="contains" style="width:150px" placeholder="Search text" >
+					<h:outputText value="#{reclamation.message_object}" />
+				</p:column>
+
+            <p:column headerText="Content">
+                <h:outputText value="#{reclamation.message_content}" />
+            </p:column>
+
+            <p:column headerText="Actions">
+                <h:commandButton action="#{reclamationBean.modifier(reclamation)}" value="modifier" />
+
+                <h:commandButton action="#{reclamationBean.supprimer(reclamation.reclamationId)}" value="supprimer" />
+            </p:column>
+
+        </p:dataTable>
+
+    </h:form>
+</h:body>
+
+</html>
